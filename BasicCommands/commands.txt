@@ -1,0 +1,7 @@
+chmod
+file
+sort
+lpr
+mv -i
+mv -n
+mv -b
