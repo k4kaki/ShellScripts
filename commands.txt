@@ -1,0 +1,3 @@
+sed 's/linux/unix/' sed1.txt
+sed 's/linux/unix/2' sed1.txt
+sed 's/linux/unix/g' sed1.txt
