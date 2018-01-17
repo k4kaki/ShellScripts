@@ -2,5 +2,6 @@ sed 's/linux/unix/' sed1.txt
 sed 's/linux/unix/2' sed1.txt
 sed 's/linux/unix/g' sed1.txt
 sed 's/linux/unix/3g' sed1.txt
-echo "Welcome To The Geek Stuff" | sed 's/\(\b[A-Z]\)/\(\1\)/g'
-
+echo "Welcome To The Geek Stuff" | sed 's/\(\b[A-Z]\)/\(\1\)/g' #Printing every word's first letter in parenthesis
+sed '3 s/unix/linux/' geekfile.txt #Replacing on specific line number
+sed 's/unix/linux/p' geekfile.txt #It duplicate the replaced lines
