@@ -1,0 +1,26 @@
+[ ]: Matches any one of a set characters
+[ ] with hyphen: Matches any one of a range characters
+^: The pattern following it must occur at the beginning of each line
+^ with [ ] : The pattern must not contain any character in the set specified
+$: The pattern preceding it must occur at the end of each line
+. (dot): Matches any one character
+\ (backslash): Ignores the special meaning of the character following it
+*: zero or more occurrences of the previous character
+(dot).*: Nothing or any numbers of characters.
+
+grep  "New[abc]"  filename
+grep  "[aA]g[ar][ar]wal"  filename
+grep  "New[a-e]" filename
+grep  "New[0-9][a-z]"  filename
+grep  “^san”  filename
+ls –l |grep  “^d” 
+ls –l |grep  “^-” 
+grep  “New[^a-c]”  filename
+grep  “^[^a-z A-Z]”  filename
+grep "vedik$" file.txt
+grep "..vik" file.txt
+grep "7..9$" file.txt
+grep "New\.\[abc\]" file.txt
+grep "S\.K\.Kumar" file.txt
+grep "[aA]gg*[ar][ar]wal" file.txt
+grep "S.*Kumar" file.txt
