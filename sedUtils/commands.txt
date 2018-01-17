@@ -8,6 +8,7 @@ sed 's/unix/linux/p' geekfile.txt #It duplicate the replaced lines
 sed -n 's/unix/linux/p' geekfile.txt #Printing the replacement affected lines
 sed '1,3 s/unix/linux/' geekfile.txt #Replacing the patterns in a range of lines
 sed '2,$ s/unix/linux/' geekfile.txt
-sed '$d' sed1.txt
-sed 'x,yd' filename.txt
-sed 'nth,' filename.txt
+sed '$d' sed1.txt #Deleting last line of the file
+sed 'x,yd' filename.txt #Deleting between two line numbers
+sed 'nth,$d' filename.txt  #Deleting nth line to last line
+sed '/pattern/d' filename.txt #Deleting pattern matching line
