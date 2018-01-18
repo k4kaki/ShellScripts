@@ -1,0 +1,43 @@
+ if [ -d configurations ]
+ cd "configurations"
+
+                for childDir in `ls -1`
+                do
+
+                        if [ -f "$childDir" ]; then
+                                echo $childDir
+                                echo " is a file"
+                        else
+                                cd "$childDir"
+                                recurrsiveCall
+                                cd ..
+                        fi
+                done
+        cd ..
+
+     cd ..
+ else
+         mkdir configurations
+                 cd "configurations"
+
+                for childDir in `ls -1`
+                do
+
+                        if [ -f "$childDir" ]; then
+                                echo $childDir
+                                echo " is a file"
+                        else
+                                cd "$childDir"
+                                recurrsiveCall
+                                cd ..
+                        fi
+                done
+        cd ..
+
+     cd ..
+
+    fi
+
+fi
+done
+
